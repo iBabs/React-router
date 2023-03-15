@@ -1,0 +1,52 @@
+{
+    "stations":[
+        {
+            "id": 1,
+            "name": "Ikorodu Train",
+            "location": "Ikorodu",
+            "code": "LASG-321-TS",
+            "capacity": 500,
+            "fee": 200
+        },
+        {
+            "id": 2,
+            "name": "Ikeja Train",
+            "location": "Alawusa",
+            "code": "LASG-451-TS",
+            "capacity": 450,
+            "fee": 120
+        },
+        {
+            "id": 3,
+            "name": "Lekki Train",
+            "location": "Lakuwe Ajah",
+            "code": "LASG-767-TS",
+            "capacity": 650,
+            "fee": 200
+        },
+        {
+            "id": 4,
+            "name": "Mushin Train",
+            "location": "Mushin",
+            "code": "LASG-275-TS",
+            "capacity": 400,
+            "fee": 300
+        },
+        {
+            "id": 5,
+            "name": "Igando Train",
+            "location": "Egan",
+            "code": "LASG-123-TS",
+            "capacity": 700,
+            "fee": 100
+        },
+        {
+            "id": 6,
+            "name": "Badagry Train",
+            "location": "Badagry",
+            "code": "LASG-789-TS",
+            "capacity": 500,
+            "fee": 200
+        }
+    ]
+}
