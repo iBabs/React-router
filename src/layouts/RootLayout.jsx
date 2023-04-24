@@ -16,6 +16,9 @@ function RootLayout() {
         <NavLink className="px-7 py-2" to="help">
           Help
         </NavLink>
+        <NavLink className="px-7 py-2" to="stations">
+          Stations
+        </NavLink>
       </nav>
     </header>
     <main  className="min-h-screen bg-slate-200 flex justify-center pt-10 px-10">

@@ -15,29 +15,34 @@ import Helplayout from "./layouts/helplayout";
 import FAQ from "./pages/FAQ";
 import Contacts from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-
-
+import StationsLayout from "./layouts/StationsLayout";
+import Stations, { stationsLoader } from "./pages/Stations";
+import StaionsDetails from "./pages/StaionsDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout/> }>
+    <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path ="help" element={<Helplayout/>}>
-        <Route path="FAQ" element={<FAQ/>}/>
-        <Route path="contacts" element={<Contacts/>}/>
+
+      {/* Help rooute */}
+      <Route path="help" element={<Helplayout />}>
+        <Route path="FAQ" element={<FAQ />} />
+        <Route path="contacts" element={<Contacts />} />
       </Route>
-      <Route path="*" element={<NotFound/>}/>
+
+      {/* staions route */}
+      <Route path="stations" element={<StationsLayout />}>
+        <Route index element={<Stations />} loader={stationsLoader} />
+        <Route path=":id" element= {<StaionsDetails/>}/>
+      </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
 
 function App() {
-  return (
-    
-      <RouterProvider router={router} />
-    
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
