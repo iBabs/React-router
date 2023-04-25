@@ -17,7 +17,7 @@ import Contacts from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import StationsLayout from "./layouts/StationsLayout";
 import Stations, { stationsLoader } from "./pages/Stations";
-import StaionsDetails from "./pages/StaionsDetails";
+import StaionsDetails, { stationDeatailsLoader } from "./pages/StaionsDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,7 +34,7 @@ const router = createBrowserRouter(
       {/* staions route */}
       <Route path="stations" element={<StationsLayout />}>
         <Route index element={<Stations />} loader={stationsLoader} />
-        <Route path=":id" element= {<StaionsDetails/>}/>
+        <Route path=":id" element= {<StaionsDetails/>} loader={stationDeatailsLoader}/>
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>

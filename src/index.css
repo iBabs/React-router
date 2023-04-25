@@ -11,3 +11,7 @@ header nav a.active{
     border-bottom: solid 5px rgb(43, 248, 248);
 }
 
+body{
+    width: max-content;
+    height:100vh;
+}
