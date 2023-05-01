@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 
 function RootLayout() {
   return (
-   <div className='rootlayout min-w-screen'>
+   <div className='rootlayout w-screen'>
     <header className=" flex justify-between px-2  items-center bg-slate-600">
       <h1 className="text-2xl text-yellow-50">Personalty</h1>
       <nav className="flex  pt-5 text-white font-bold">

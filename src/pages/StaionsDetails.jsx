@@ -24,5 +24,9 @@ export const stationDeatailsLoader = async({params}) =>{
 
     const res = await fetch(`http://localhost:4000/stations/${id}`)
 
+    if(!res.ok){
+        throw Error("Staion doesn't exist")
+    }
+
     return res.json()
 }

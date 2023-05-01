@@ -1,23 +1,24 @@
 import React from 'react'
+import { Form } from 'react-router-dom'
 
 function Contacts() {
   return (
-    <div >
-        <form className='space-y-5 '>
+    <div > 
+        <Form method='post' action='/help/contacts' className='space-y-5 '>
             <div className='space-y-2 '>
-                <label for='name'>
+                <label htmlFor='name'>
                     Name
                 </label><br/>
                 <input name='name' type='text' className='shadow-md' required/>
             </div>
             <div>
-                <label for='email'>
+                <label htmlFor='email'>
                     email
                 </label><br/>
-                <input name='email' type='text' className='shadow-md' required/>
+                <input name='email' type='email' className='shadow-md' required/>
             </div>
             <div className='space-y-2 ' >
-                <label form='message'>
+                <label htmlFor='message'>
                     Message
                 </label> <br/>
                 <textarea name='message' rows="4" cols="50" maxLength="200" className='rounded-md shadow-lg' required/>
@@ -26,9 +27,10 @@ function Contacts() {
                 <input type='submit' value="SEND" className='shadow-md hover:shadow-lg p-3 font-mono 
                 hover:cursor-pointer hover:scale-105 bg-slate-300 rounded-lg'/>
             </div>
-        </form>
+        </Form>
     </div>
   )
 }
 
 export default Contacts
+

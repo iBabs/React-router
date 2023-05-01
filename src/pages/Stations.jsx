@@ -24,5 +24,10 @@ export default function Stations() {
 export const stationsLoader = async () => {
   const res = await fetch("http://localhost:4000/stations");
 
+  if(!res.ok){
+    throw Error("Staion doesn't exist")
+}
+
+
   return res.json();
 };
